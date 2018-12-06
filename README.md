@@ -6,9 +6,9 @@ For OpenID Connect supported features of this server, see [Supported Features do
 
 ## Run
 
-Obtain the Docker image from Docker Hub image: https://hub.docker.com/r/ghchinoy/mitreid-connect/
+Obtain the Docker image from Docker Hub image: https://hub.docker.com/r/marcelkottmann/mitreid-connect/
 
-	docker pull ghchinoy/mitreid-connect
+	docker pull marcelkottmann/mitreid-connect
 
 If you'd like to build your own image, see the [Build](#build) section, below.
 
@@ -42,7 +42,7 @@ Run a container
 ```
 docker run -d --name mitreoidc -p 8080:8080 \
 -v `pwd`/server-config.xml:/opt/mitreidc/openid-connect-server-webapp/src/main/webapp/WEB-INF/server-config.xml \
-ghchinoy/mitreid-connect
+marcelkottmann/mitreid-connect
 ```
 
 ## Use
@@ -72,7 +72,7 @@ Exposed at 8080, as above (in the [Run](#configure) section), a few useful URLs,
 
 See the `Dockerfile.mitreid-connect` for more info on how the image was constructed.
 
-	docker build --tag ghchinoy/mitreid-connect -f Dockerfile.mitreid-connect .
+	docker build --tag marcelkottmann/mitreid-connect -f Dockerfile.mitreid-connect .
 
 See also build.sh which automatically sets the version tag to the version of mitreid-connect.
 
